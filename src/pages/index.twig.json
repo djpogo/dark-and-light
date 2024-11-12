@@ -5,22 +5,22 @@
     "demopages": [
         {
             "title": "Only Dark Theme",
-            "url": "/dark-mode"
+            "url": "/dark-mode.html"
         }, {
             "title": "Only Light Theme",
-            "url": "/light-mode"
+            "url": "/light-mode.html"
         }, {
             "title": "Media Query Demo Page",
-            "url": "/media-query"
+            "url": "/media-query.html"
         }, {
             "title": "Media Query Toggle Demo Page",
-            "url": "/media-query-toggle"
+            "url": "/media-query-toggle.html"
         }, {
             "title": "Color-scheme only Demo Page",
-            "url": "/color-scheme"
+            "url": "/color-scheme.html"
         }, {
             "title": "Color-scheme and light-dark function Demo Page",
-            "url": "/color-scheme-more"
+            "url": "/color-scheme-more.html"
         }
     ]
 }
