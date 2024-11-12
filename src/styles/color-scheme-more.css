@@ -1,0 +1,73 @@
+:root {    
+    color-scheme: light dark;
+
+    --color-bg-light: #e9e9e9;
+    --color-text-light: #333;
+
+    --color-bg-dark: #404040;
+    --color-text-dark: #D9D9D9;
+
+    color: light-dark(var(--color-text-light), var(--color-text-dark));
+    background-color: light-dark(var(--color-bg-light), var(--color-bg-dark));
+
+    --color-card-bg: light-dark(
+        hsl(from var(--color-bg-light) h s calc(l * 1.25) / 1),
+        hsl(from var(--color-bg-dark) h s calc(l * 1.25) / 1)
+    );
+
+    --color-card-header-overlay-bg: light-dark(
+        rgb(from var(--color-bg-light) r g b / .9),
+        rgb(from var(--color-bg-dark) r g b / .9)
+    );
+
+    --color-button-bg: light-dark(
+        hsl(from var(--color-bg-light) h s calc(l * .9) / 1),
+        hsl(from var(--color-bg-dark) h s calc(l * .9) / 1)
+    );
+    --color-button: light-dark(
+        hsl(from var(--color-text-light) h s calc(l * 1.05) / 1),
+        hsl(from var(--color-text-dark) h s calc(l * 1.05) / 1)
+    );
+
+    --color-button-border: light-dark(
+        hsl(from var(--color-bg-light) h s calc(l * 0.9) / 1),
+        hsl(from var(--color-bg-dark) h s calc(l * 0.9) / 1)
+    );
+
+    --button-border: 2px solid var(--color-button-border);
+
+    --color-button-bg-hover: light-dark(
+        hsl(from var(--color-bg-light) h s calc(l * 0.85) / 1),
+        hsl(from var(--color-bg-dark) h s calc(l * 0.85) / 1)
+    );
+    --color-button-hover: light-dark(
+        hsl(from var(--color-text-light) h s calc(l * 1.1) / 1)
+        hsl(from var(--color-text-dark) h s calc(l * 1.1) / 1)
+    );
+    --color-button-border-hover: light-dark(
+        hsl(from var(--color-bg-light) h s calc(l * .8) / 1),
+        hsl(from var(--color-bg-dark) h s calc(l * 1.1) / 1)
+    );
+
+    --button-border-hover: 2px solid var(--color-button-border-hover);
+
+    --color-button-bg-focus: light-dark(
+        hsl(from var(--color-bg-light) h s calc(l * 0.85) / 1),
+        hsl(from var(--color-bg-dark) h s calc(l * 0.85) / 1)
+    );
+    --color-button-focus: light-dark(
+        hsl(from var(--color-text-light) h s calc(l * 1.1) / 1)
+        hsl(from var(--color-text-dark) h s calc(l * 1.1) / 1)
+    );
+    --color-button-border-focus: light-dark(
+        hsl(from var(--color-bg-light) h s calc(l * .8) / 1),
+        hsl(from var(--color-bg-dark) h s calc(l * 1.1) / 1)
+    );
+
+    --button-border-focus: 2px solid var(--color-button-border-focus);
+    
+}
+
+.card__header::before {
+    background-image: linear-gradient(transparent, var(--color-card-header-overlay-bg) 80%, var(--color-card-bg) 100%);
+}

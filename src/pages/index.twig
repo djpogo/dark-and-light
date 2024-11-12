@@ -1,0 +1,17 @@
+{% include 'layouts/main.twig' %}
+
+<p>
+This is the demo page for this blog post about <a href="https://raoulpilop.de/dark-light-theming-in-2025/">Dark and Light modes in 2025</a>.<br>
+The follwoing boxes are <code>iframes</code> with different Lght- and Dark-Mode implementations.
+</p>
+<p>
+You can find the full source code at github <a href="https://github.com/djpogo/dark-and-light">djpogo/dark-and-light</a>.
+</p>
+
+<div class="example-grid">
+    {% for page in demopages %}
+        <iframe src="{{ page.url }}" title="{{ page.title }}" class="example"></iframe>
+    {% endfor %}
+</div>
+
+<p>a page from <a href="https://raoulpilop.de">raoul pilop</a> / no 3rd party resources / no cookies / no tracking / logs get anonymized on rotation</p>

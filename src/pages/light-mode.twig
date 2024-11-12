@@ -1,0 +1,10 @@
+{% include 'layouts/main.twig' %}
+
+<p>This demo is a showcase how a styled light theme looks.</p>
+
+{% include 'components/card.twig' with {
+    title: 'Only Light Theme',
+    image: '/src/assets/mourad-saadi-9BOmF9--EZk-unsplash',
+    body: '<a href="https://unsplash.com/de/fotos/die-sonne-geht-uber-den-wellen-des-ozeans-unter-9BOmF9--EZk">Picture</a> from <a href="https://unsplash.com/de/@mougrapher?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Mourad Saadi</a> via <a href="https://unsplash.com/de/fotos/die-sonne-geht-uber-den-wellen-des-ozeans-unter-9BOmF9--EZk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>',
+    footer: '<button class="button">styled button</button> <button>unstyled button</button>'
+} %}

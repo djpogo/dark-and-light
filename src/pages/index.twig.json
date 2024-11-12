@@ -1,0 +1,26 @@
+{
+    "title": "Dark and Light Theme/Mode Demo Page",
+    "light": true,
+    "dark": true,
+    "demopages": [
+        {
+            "title": "Only Dark Theme",
+            "url": "/dark-mode"
+        }, {
+            "title": "Only Light Theme",
+            "url": "/light-mode"
+        }, {
+            "title": "Media Query Demo Page",
+            "url": "/media-query"
+        }, {
+            "title": "Media Query Toggle Demo Page",
+            "url": "/media-query-toggle"
+        }, {
+            "title": "Color-scheme only Demo Page",
+            "url": "/color-scheme"
+        }, {
+            "title": "Color-scheme and light-dark function Demo Page",
+            "url": "/color-scheme-more"
+        }
+    ]
+}

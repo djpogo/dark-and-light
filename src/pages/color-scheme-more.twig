@@ -1,0 +1,10 @@
+{% include 'layouts/main.twig' %}
+
+<p>This demo uses <code>color-scheme: light dark;</code> and <code>light-dark()</code> color function to create the dark/light theming.</p>
+
+{% include 'components/card.twig' with {
+    title: 'Dark- & Light Mode via color-scheme: light dark;',
+    image: '/src/assets/jakub-sejkora-utqJcneoFjo-unsplash',
+    body: '<a href="https://unsplash.com/de/fotos/brauner-und-gruner-blattbaum-utqJcneoFjo">Picture</a> from <a href="https://unsplash.com/de/@jakubsejkora?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Jakub Sejkora</a> via <a href="https://unsplash.com/de/fotos/brauner-und-gruner-blattbaum-utqJcneoFjo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>',
+    footer: '<button class="button">styled button</button> <button>unstyled button</button>'
+} %}

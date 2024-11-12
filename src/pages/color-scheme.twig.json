@@ -1,0 +1,7 @@
+{
+    "title": "Color Scheme only Demo Page",
+    "addBaseCss": true,
+    "style": "/color-scheme",
+    "dark": true,
+    "light": true
+}

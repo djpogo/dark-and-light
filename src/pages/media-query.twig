@@ -1,0 +1,10 @@
+{% include 'layouts/main.twig' %}
+
+<p>This demo uses <code>@media (prefers-color-scheme: dark)</code> to switch between light and dark mode.</p>
+
+{% include 'components/card.twig' with {
+    title: 'Dark- & Light Mode via media query',
+    image: '/src/assets/nitish-meena-RbbdzZBKRDY-unsplash',
+    body: '<a href="https://unsplash.com/de/fotos/landscape-photography-of-mountains-with-cloudy-skies-during-golden-hour-RbbdzZBKRDY">Picture</a> from <a href="https://unsplash.com/de/@nitishm?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Nitish Meena</a> via <a href="https://unsplash.com/de/fotos/landscape-photography-of-mountains-with-cloudy-skies-during-golden-hour-RbbdzZBKRDY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>',
+    footer: '<button class="button">styled button</button> <button>unstyled button</button>'
+} %}

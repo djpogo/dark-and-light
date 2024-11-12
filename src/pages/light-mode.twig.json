@@ -1,0 +1,6 @@
+{
+    "title": "Light-Theme Demo Page",
+    "addBaseCss": true,
+    "style": "light-theme",
+    "light": true
+}

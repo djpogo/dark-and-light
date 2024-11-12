@@ -1,0 +1,10 @@
+{% include 'layouts/main.twig' %}
+
+<p>This demo is a showcase how a styled dark theme looks.</p>
+
+{% include 'components/card.twig' with {
+    title: 'Only Dark Theme',
+    image: '/src/assets/mourad-saadi-GyDktTa0Nmw-unsplash',
+    body: '<a href="https://unsplash.com/de/fotos/meereswelle-am-strand-GyDktTa0Nmw">Picture</a> from <a href="https://unsplash.com/de/@mougrapher?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Mourad Saadi</a> via <a href="https://unsplash.com/de/fotos/meereswelle-am-strand-GyDktTa0Nmw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>',
+    footer: '<button class="button">styled button</button> <button>unstyled button</button>'
+} %}

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if addBaseCss %}
+    <link rel="stylesheet" href="/src/styles/base.css">
+    {% endif %}
+    <link rel="stylesheet" href="/src/styles/{{ style }}.css">
+    {% include '../components/favicons.twig' with { light: light, dark: dark } %}
+    <title>Dark & Light Mode Examples</title>
+  </head>
+  <body>
+    <h1>{{ title }}</h1>
+    <script>
+      window.requestIdleCallback(() => {
+        document.querySelectorAll('a').forEach((a) => {
+          a.target = '_blank';
+          a.rel = 'noopener noreferrer';
+        });
+      });
+    </script>
+  </body>
+</html>

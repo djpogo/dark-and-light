@@ -1,0 +1,18 @@
+<div class="card">
+  <div class="card__header">
+    {% if image %}
+    <picture class="card__picture">
+        <source srcset="{{ image }}.avif" type="image/avif">
+        <source srcset="{{ image }}.webp" type="image/webp">
+        <img class="card__image" src="{{ image }}.jpg" alt="{{ imageAlt }}">
+    </picture>
+    {% endif %}
+    <h2 class="card__title">{{ title }}</h2>
+  </div>
+  <div class="card__body">
+    {{ body }}
+  </div>
+  <div class="card__footer">
+    {{ footer }}
+  </div>
+</div>

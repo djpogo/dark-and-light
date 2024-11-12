@@ -1,0 +1,10 @@
+{% include 'layouts/main.twig' %}
+
+<p>This demo only set <code>color-scheme: light dark;</code> in the <code>:root</code> stylesheet.</p>
+
+{% include 'components/card.twig' with {
+    title: 'Dark- & Light Mode via color-scheme: light dark;',
+    image: '/src/assets/daniel-sessler-hnw3Al47-KE-unsplash',
+    body: '<a href="https://unsplash.com/de/fotos/baume-die-tagsuber-von-korperwasser-umgeben-sind-hnw3Al47-KE">Picture</a> from <a href="https://unsplash.com/de/@danielsessler?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Daniel Seßler</a> via <a href="https://unsplash.com/de/fotos/baume-die-tagsuber-von-korperwasser-umgeben-sind-hnw3Al47-KE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>',
+    footer: '<button class="button">styled button</button> <button>unstyled button</button>'
+} %}

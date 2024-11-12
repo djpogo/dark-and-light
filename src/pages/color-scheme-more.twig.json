@@ -1,0 +1,7 @@
+{
+    "title": "Color-scheme with light-dark function Demo Page",
+    "addBaseCss": true,
+    "style": "/color-scheme-more",
+    "light": true,
+    "dark": true
+}

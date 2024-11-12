@@ -1,0 +1,25 @@
+{% include 'layouts/main.twig' %}
+
+<p>This demo uses <code>@media (prefers-color-scheme: dark)</code> but adds a toggle-switch to select between light and dark theme too!</p>
+<input type="checkbox" id="theme-toggle" class="theme-toggle"><label for="theme-toggle" class="theme-toggle-label">use light theme</label>
+
+{% include 'components/card.twig' with {
+    title: 'Dark- & Light Mode via media query with toggle',
+    image: '/src/assets/kimon-maritz-jl2T_E4tUyo-unsplash',
+    body: '<a href="https://unsplash.com/de/fotos/luftaufnahme-von-bergen-mit-schnee-jl2T_E4tUyo">Picture</a> from <a href="https://unsplash.com/de/@kimonmaritz?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Kimon Maritz</a> via <a href="https://unsplash.com/de/fotos/luftaufnahme-von-bergen-mit-schnee-jl2T_E4tUyo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>',
+    footer: '<button class="button">styled button</button> <button>unstyled button</button>'
+} %}
+
+<script>
+    const lightThemeChoosen = window.localStorage.getItem('light-theme') === 'true';
+    const themeToggle = document.getElementById('theme-toggle');
+    themeToggle.checked = lightThemeChoosen;
+    if (lightThemeChoosen) {
+        document.documentElement.dataset.theme = 'light';
+    }
+    themeToggle.addEventListener('change', () => {
+        document.documentElement.dataset.theme = themeToggle.checked ? 'light' : 'dark';
+        window.localStorage.setItem('light-theme', themeToggle.checked);
+    });
+
+</script>

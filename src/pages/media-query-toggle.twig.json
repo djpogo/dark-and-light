@@ -1,0 +1,7 @@
+{
+    "title": "Media Query Toggle Demo Page",
+    "addBaseCss": true,
+    "style": "media-query-toggle",
+    "light": true,
+    "dark": true
+}

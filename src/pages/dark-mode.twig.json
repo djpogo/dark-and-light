@@ -1,0 +1,6 @@
+{
+    "title": "Dark-Theme Demo Page",
+    "addBaseCss": true,
+    "style": "dark-theme",
+    "dark": true
+}
