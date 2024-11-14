@@ -4,7 +4,14 @@ import twig from '@vituum/vite-plugin-twig';
 
 export default defineConfig({
     plugins: [
-        vituum(),
+        vituum({
+            imports: {
+                filenamePattern: {
+                    '+.css': [],
+                    '+.scss': 'src/styles'
+                }
+            }
+        }),
         twig({
             root: './src',
         }),
