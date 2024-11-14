@@ -1,0 +1,22 @@
+@use "./reset.scss";
+@use "./card.scss";
+
+.button {
+    background-color: var(--color-button-bg, initial);
+    color: var(--color-button, initial);
+    border: var(--button-border, initial);
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 3px;
+    font-weight: 700;
+}
+.button:hover {
+    background-color: var(--color-button-bg-hover, --color-button-bg);
+    color: var(--color-button-hover, --color-button);
+    border: var(--button-border-hover, --button-border);
+}
+.button:focus {
+    background-color: var(--color-button-bg-focus, --color-button-bg);
+    color: var(--color-button-focus, --color-button);
+    border: var(--button-border-focus, --button-border);
+}

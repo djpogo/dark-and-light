@@ -1,0 +1,32 @@
+@use "./theme-custom-props.scss" as props;
+
+:root {
+    @include props.light;
+    
+    color: var(--color-text);
+    background-color: var(--color-bg);
+}
+
+@media (prefers-color-scheme: light) {
+    :root:not(html[data-theme="dark"]) {
+        @include props.light;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not(html[data-theme="light"]) {
+        @include props.dark;
+    }
+}
+
+html[data-theme="light"] {
+    :root {
+        @include props.light;
+    }
+}
+
+html[data-theme="dark"] {
+    :root {
+        @include props.dark;
+    }
+}
