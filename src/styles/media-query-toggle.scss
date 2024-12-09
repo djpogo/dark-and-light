@@ -5,6 +5,7 @@
     
     color: var(--color-text);
     background-color: var(--color-bg);
+    accent-color: var(--color-accent);
 }
 
 @media (prefers-color-scheme: light) {
@@ -19,14 +20,10 @@
     }
 }
 
-html[data-theme="light"] {
-    :root {
-        @include props.light;
-    }
+:root:is(html[data-theme="light"]) {
+    @include props.light;
 }
 
-html[data-theme="dark"] {
-    :root {
-        @include props.dark;
-    }
+:root:is(html[data-theme="dark"]) {
+    @include props.dark;
 }
