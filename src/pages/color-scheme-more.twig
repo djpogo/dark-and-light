@@ -1,5 +1,17 @@
 {% include 'layouts/main.twig' %}
 
+{% include 'components/multi-toggle.twig' with {
+        default: 'auto',
+        label: 'Theme:',
+        name: 'theme-chooser',
+        dataJs: 'theme-chooser',
+        items: [
+            { label: 'Auto', value: 'auto' },
+            { label: 'Light', value: 'light' },
+            { label: 'Dark', value: 'dark' },
+        ]
+    }
+%}
 <p>This demo uses <code>color-scheme: light dark;</code> and <code>light-dark()</code> color function to create the dark/light theming.</p>
 
 {% include 'components/card.twig' with {

@@ -1,9 +1,19 @@
 {% include 'layouts/main.twig' %}
 
-<p>This demo uses <code>@media (prefers-color-scheme: dark)</code> but adds a toggle-switch to select between light and dark theme too!</p>
+{% include 'components/multi-toggle.twig' with {
+        default: 'auto',
+        label: 'Theme:',
+        name: 'theme-chooser',
+        dataJs: 'theme-chooser',
+        items: [
+            { label: 'Auto', value: 'auto' },
+            { label: 'Light', value: 'light' },
+            { label: 'Dark', value: 'dark' },
+        ]
+    }
+%}
 
-<input type="radio" id="theme-toggle-light" name="theme-toggle" class="theme-toggle"><label for="theme-toggle-light" class="theme-toggle-label">use light theme</label>
-<input type="radio" id="theme-toggle-dark" name="theme-toggle" class="theme-toggle"><label for="theme-toggle-dark" class="theme-toggle-label">use dark theme</label>
+<p>This demo uses <code>@media (prefers-color-scheme: dark)</code> but adds a toggle-switch to select between light and dark theme too!</p>
 
 {% include 'components/card.twig' with {
     title: 'Dark- & Light Mode via media query with toggle',
@@ -11,28 +21,3 @@
     body: '<a href="https://unsplash.com/de/fotos/luftaufnahme-von-bergen-mit-schnee-jl2T_E4tUyo">Picture</a> from <a href="https://unsplash.com/de/@kimonmaritz?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Kimon Maritz</a> via <a href="https://unsplash.com/de/fotos/luftaufnahme-von-bergen-mit-schnee-jl2T_E4tUyo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>',
     footer: '<button class="button">styled button</button> <button>unstyled button</button>'
 } %}
-
-<script>
-    const lightThemeChoosen = window.localStorage.getItem('light-theme') === 'true';
-    const themeToggleLight = document.getElementById('theme-toggle-light');
-    const themeToggleDark = document.getElementById('theme-toggle-dark');
-    themeToggleLight.checked = lightThemeChoosen;
-    themeToggleDark.checked = !lightThemeChoosen;
-
-    if (lightThemeChoosen) {
-        document.documentElement.dataset.theme = 'light';
-    }
-    if (!lightThemeChoosen) {
-        document.documentElement.dataset.theme = 'dark';
-    }
-    themeToggleLight.addEventListener('change', () => {
-        document.documentElement.dataset.theme = themeToggleLight.checked ? 'light' : 'dark';
-        window.localStorage.setItem('light-theme', themeToggleLight.checked);
-    });
-    themeToggleDark.addEventListener('change', () => {
-        document.documentElement.dataset.theme = !themeToggleDark.checked ? 'light' : 'dark';
-        window.localStorage.setItem('light-theme', !themeToggleDark.checked);
-    });
-
-
-</script>

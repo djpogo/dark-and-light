@@ -1,6 +1,7 @@
 {
     "title": "Color-scheme with light-dark function Demo Page",
     "addBaseCss": true,
+    "addThemeSwitch": true,
     "style": "/color-scheme-more",
     "light": true,
     "dark": true

@@ -1,5 +1,6 @@
 @use "./reset.scss";
 @use "./card.scss";
+@use "./multi-toggle.scss";
 
 .button {
     background-color: var(--color-button-bg, initial);

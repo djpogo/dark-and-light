@@ -1,14 +1,20 @@
-:root {    
-    color-scheme: light dark;
-
+:root {
     --color-bg-light: #e9e9e9;
     --color-text-light: #333;
+    --color-accent-light: #ff9900;
 
     --color-bg-dark: #404040;
     --color-text-dark: #D9D9D9;
+    --color-accent-dark: #cc6600;
+
+    --color-accent: light-dark(
+        var(--color-accent-light),
+        var(--color-accent-dark)
+    );
 
     color: light-dark(var(--color-text-light), var(--color-text-dark));
     background-color: light-dark(var(--color-bg-light), var(--color-bg-dark));
+    accent-color: var(--color-accent);
 
     --color-card-bg: light-dark(
         hsl(from var(--color-bg-light) h s calc(l * 1.25) / 1),
@@ -25,7 +31,7 @@
         hsl(from var(--color-bg-dark) h s calc(l * .9) / 1)
     );
     --color-button: light-dark(
-        hsl(from var(--color-text-light) h s calc(l * 1.05) / 1),
+        hsl(from var(--color-bg-light) h s calc(l * 0.9) / 1),
         hsl(from var(--color-text-dark) h s calc(l * 1.05) / 1)
     );
 
@@ -66,6 +72,16 @@
 
     --button-border-focus: 2px solid var(--color-button-border-focus);
     
+}
+
+:root:not(html[data-theme="light"], html[data-theme="dark"]) {
+    color-scheme: light dark;
+}
+:root:is(html[data-theme="light"]) {
+    color-scheme: light;
+}
+:root:is(html[data-theme="dark"]) {
+    color-scheme: dark;
 }
 
 .card__header::before {
